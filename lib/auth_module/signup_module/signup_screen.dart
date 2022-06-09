@@ -35,7 +35,7 @@ class _SignUpState extends State<SignUp> {
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [Color(0x00000000), Color(0xFF000000)],
+                colors: kGradientColorList,
               ),
             ),
           ),
@@ -53,8 +53,9 @@ class _SignUpState extends State<SignUp> {
                   height: 50.0,
                   width: 50.0,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12.0),
-                      color: Colors.white),
+                    borderRadius: BorderRadius.circular(12.0),
+                    color: Colors.white,
+                  ),
                   child: const Icon(
                     Icons.facebook,
                     color: kPrimaryThemeColor,
@@ -92,7 +93,7 @@ class _SignUpState extends State<SignUp> {
                   label: 'Connect with Phone',
                   backgroundColor: kPrimaryThemeColor,
                   onPress: () {
-                    //TODO: Add Connect with Phone Functionality
+                    Navigator.pushNamed(context, '/connectWithPhone');
                   },
                 ),
                 SizedBox(height: height * 0.05),

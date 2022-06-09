@@ -33,7 +33,7 @@ class _SignInState extends State<SignIn> {
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [Color(0x00000000), Color(0xFF000000)],
+                colors: kGradientColorList,
               ),
             ),
           ),

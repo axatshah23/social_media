@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:social/constants.dart';
 
 class CustomInputField extends StatelessWidget {
   const CustomInputField(
@@ -17,16 +18,16 @@ class CustomInputField extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(24.0, 8.0, 24.0, 0),
       child: TextFormField(
         onChanged: onChange,
-        style: TextStyle(color: Colors.grey[600]),
+        style: TextStyle(color: kFieldEnteredTextColor),
         obscureText: obscureText,
         decoration: InputDecoration(
           border: InputBorder.none,
           hintText: hintText,
-          hintStyle: const TextStyle(color: Colors.grey),
+          hintStyle: TextStyle(color: kHintTextColor),
           filled: true,
-          fillColor: Colors.grey[200],
-          focusedBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.grey),
+          fillColor: kFieldFillColor,
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: kFieldFocusBorderColor),
           ),
         ),
       ),
