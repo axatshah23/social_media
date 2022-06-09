@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:social/auth_module/signin_module/components/custom_input_field.dart';
 import 'package:social/auth_module/signin_module/components/signin_submit_button.dart';
+import 'package:social/constants.dart';
+import 'package:social/widgets/custom_input_field.dart';
 
 class SignInCard extends StatefulWidget {
   const SignInCard({Key? key}) : super(key: key);
@@ -36,11 +37,11 @@ class _SignInCardState extends State<SignInCard> {
           ),
 
           /// Login to your account heading
-          Padding(
-            padding: const EdgeInsets.only(top: 12.0),
+          const Padding(
+            padding: EdgeInsets.only(top: 12.0),
             child: Text(
               'Login to your account',
-              style: TextStyle(color: Colors.grey[400], fontSize: 17.0),
+              style: TextStyle(color: kHintTextColor, fontSize: 17.0),
             ),
           ),
           SizedBox(height: height * 0.05),
@@ -68,7 +69,8 @@ class _SignInCardState extends State<SignInCard> {
           /// Sign-In Submit Button
           SignInSubmitButton(
             onPress: () {
-              // TODO: Redirect to main application homescreen
+              Navigator.popUntil(context, ModalRoute.withName('/home'));
+              Navigator.pushNamed(context, '/home');
             },
           ),
           SizedBox(height: height * 0.05),

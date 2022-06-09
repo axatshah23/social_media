@@ -21,7 +21,7 @@ class _SignInState extends State<SignIn> {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('images/signin_screen_background.jpg'),
+                image: AssetImage('assets/images/signin_screen_background.jpg'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -33,7 +33,7 @@ class _SignInState extends State<SignIn> {
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [Color(0x00000000), Color(0xFF000000)],
+                colors: kGradientColorList,
               ),
             ),
           ),
