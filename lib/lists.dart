@@ -70,29 +70,11 @@ List<String> lastMessage = [
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
 ];
 
-List<bool> newMessage = [
-  true,
-  true,
-  true,
-  true,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-];
-
 List<String> numberOfNewMessages = [
-  '3',
-  '1',
   '2',
-  '7',
+  '1',
+  '3',
+  '6',
   '0',
   '0',
   '0',

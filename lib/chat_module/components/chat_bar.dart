@@ -8,14 +8,13 @@ class ChatBar extends StatefulWidget {
       required this.imageURL,
       required this.name,
       required this.lastMessage,
-      required this.newMessage,
       required this.numberOfNewMessages,
       required this.time})
       : super(key: key);
   final String imageURL;
   final String name;
   final String lastMessage;
-  final bool newMessage;
+  //final bool newMessage;
   final String numberOfNewMessages;
   final String time;
 
@@ -24,6 +23,10 @@ class ChatBar extends StatefulWidget {
 }
 
 class _ChatBarState extends State<ChatBar> {
+  bool newMessage() {
+    return (widget.numberOfNewMessages == '0') ? false : true;
+  }
+
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -64,7 +67,7 @@ class _ChatBarState extends State<ChatBar> {
                       /// New messages dot
                       // TODO: Program such that only visible when there are new messages
                       Visibility(
-                        visible: widget.newMessage,
+                        visible: newMessage(),
                         child: Positioned(
                           bottom: 0.0,
                           right: -0.0,

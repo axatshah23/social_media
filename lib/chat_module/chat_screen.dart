@@ -93,7 +93,6 @@ class _ChatScreenState extends State<ChatScreen> {
                   imageURL: imageAddress[index],
                   name: name[index],
                   lastMessage: lastMessage[index],
-                  newMessage: newMessage[index],
                   numberOfNewMessages: numberOfNewMessages[index],
                   time: '09:15 AM',
                 );
