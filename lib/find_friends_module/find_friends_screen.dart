@@ -18,9 +18,9 @@ class _FindFriendsScreenState extends State<FindFriendsScreen> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: kFieldFillColor,
+      backgroundColor: kSecondaryScaffoldBackgroundGrey,
       appBar: AppBar(
-        backgroundColor: kFieldFillColor,
+        backgroundColor: kSecondaryAppBarBackgroundGrey,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -31,10 +31,7 @@ class _FindFriendsScreenState extends State<FindFriendsScreen> {
               },
               child: const Text(
                 'Cancel',
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.w600),
+                style: kCancelButtonTextStyle,
               ),
             ),
             GestureDetector(
@@ -44,10 +41,7 @@ class _FindFriendsScreenState extends State<FindFriendsScreen> {
               },
               child: const Text(
                 'Next',
-                style: TextStyle(
-                    color: kPrimaryThemeColor,
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.w600),
+                style: kNextButtonTextStyle,
               ),
             ),
           ],
@@ -64,7 +58,7 @@ class _FindFriendsScreenState extends State<FindFriendsScreen> {
             padding: EdgeInsets.symmetric(horizontal: width * 0.05),
             child: const Text(
               'Find Friends',
-              style: TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold),
+              style: kFindFriendsTitleTextStyle,
             ),
           ),
           SizedBox(height: height * 0.02),

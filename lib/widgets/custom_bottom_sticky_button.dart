@@ -21,11 +21,7 @@ class CustomBottomStickyButton extends StatelessWidget {
         //alignment: Alignment.center,
         child: Text(
           label,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 20.0,
-            fontWeight: FontWeight.w700,
-          ),
+          style: kCustomBottomStickyButtonTextStyle,
           textAlign: TextAlign.center,
         ),
       ),

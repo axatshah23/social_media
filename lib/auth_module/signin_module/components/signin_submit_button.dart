@@ -14,15 +14,16 @@ class SignInSubmitButton extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(24.0, 8.0, 24.0, 0),
         child: Container(
           decoration: BoxDecoration(
-              color: kPrimaryThemeColor,
-              borderRadius: BorderRadius.circular(8.0)),
+            color: kPrimaryThemeColor,
+            borderRadius: BorderRadius.circular(8.0),
+          ),
           width: double.infinity,
           child: const Center(
             child: Padding(
               padding: EdgeInsets.all(16.0),
               child: Text(
                 'Sign In',
-                style: kSocialSignUpButtonsLabelStyle,
+                style: kSocialButtonsLabelStyle,
               ),
             ),
           ),

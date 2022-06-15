@@ -18,15 +18,15 @@ class CustomInputField extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(24.0, 8.0, 24.0, 0),
       child: TextFormField(
         onChanged: onChange,
-        style: TextStyle(color: kFieldEnteredTextColor),
+        style: const TextStyle(color: kFieldEnteredTextColor),
         obscureText: obscureText,
         decoration: InputDecoration(
           border: InputBorder.none,
           hintText: hintText,
-          hintStyle: TextStyle(color: kHintTextColor),
+          hintStyle: const TextStyle(color: kHintTextColor),
           filled: true,
           fillColor: kFieldFillColor,
-          focusedBorder: OutlineInputBorder(
+          focusedBorder: const OutlineInputBorder(
             borderSide: BorderSide(color: kFieldFocusBorderColor),
           ),
         ),

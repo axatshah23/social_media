@@ -3,8 +3,8 @@ import 'package:social/auth_module/signup_module/components/otp_field.dart';
 import 'package:social/constants.dart';
 import 'package:social/widgets/custom_bottom_sticky_button.dart';
 
+import '../../widgets/custom_back_button.dart';
 import 'components/account_added_dialog.dart';
-import 'components/custom_back_button.dart';
 
 class PhoneVerification extends StatefulWidget {
   const PhoneVerification({Key? key}) : super(key: key);
@@ -28,7 +28,11 @@ class _PhoneVerificationState extends State<PhoneVerification> {
               SizedBox(height: height * 0.025),
 
               /// Return Back Arrow
-              const CustomBackButton(),
+              CustomBackButton(
+                onPress: () {
+                  Navigator.pop(context);
+                },
+              ),
               SizedBox(height: height * 0.04),
 
               /// Phone Verification text

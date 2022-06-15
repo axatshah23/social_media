@@ -1,3 +1,6 @@
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 List<String> imageAddress = [
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc-rbEeIwHPNMWJQOTHv0C-ybMQa9FdkTfXg&usqp=CAU',
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTGMocOV2MsABX0ZfupHhaGdf2BEEY4YWP0w&usqp=CAU',
@@ -86,4 +89,55 @@ List<String> numberOfNewMessages = [
   '0',
   '0',
   '0',
+];
+
+List<IconData> shortcutIcons = [
+  FontAwesomeIcons.heart,
+  FontAwesomeIcons.userGroup,
+  FontAwesomeIcons.shop,
+  FontAwesomeIcons.bookmark,
+  FontAwesomeIcons.film,
+  FontAwesomeIcons.tv,
+  FontAwesomeIcons.clockRotateLeft,
+  FontAwesomeIcons.flag,
+  FontAwesomeIcons.calendar,
+  FontAwesomeIcons.gamepad,
+  FontAwesomeIcons.faceSmileBeam,
+  FontAwesomeIcons.trophy,
+  FontAwesomeIcons.cloudSunRain,
+  FontAwesomeIcons.newspaper,
+];
+
+List<String> shortcutLabels = [
+  'Dating',
+  'Groups',
+  'Marketplace',
+  'Saved',
+  'Reels',
+  'Videos on watch',
+  'Memories',
+  'Pages',
+  'Events',
+  'Gaming',
+  'Avatars',
+  'Fantasy Games',
+  'Weather',
+  'News',
+];
+
+List<Color?> shortcutColors = [
+  Colors.redAccent,
+  Colors.blueAccent,
+  const Color(0xFF0d47a1),
+  const Color(0xFF673ab7),
+  const Color(0xFFf48fb1),
+  Colors.lightBlueAccent,
+  const Color(0xFF0091ea),
+  const Color(0xFFff7043),
+  const Color(0xFF9ccc65),
+  const Color(0xFF00bcd4),
+  const Color(0xFF7b1fa2),
+  const Color(0xFFfbc02d),
+  const Color(0xFFff9100),
+  Colors.indigoAccent,
 ];

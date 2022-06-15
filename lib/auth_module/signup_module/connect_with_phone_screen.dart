@@ -5,8 +5,8 @@ import 'package:social/auth_module/signup_module/phone_verification_screen.dart'
 import 'package:social/constants.dart';
 import 'package:social/widgets/custom_bottom_sticky_button.dart';
 
+import '../../widgets/custom_back_button.dart';
 import '../../widgets/custom_input_field.dart';
-import 'components/custom_back_button.dart';
 
 class ConnectWithPhone extends StatefulWidget {
   const ConnectWithPhone({Key? key}) : super(key: key);
@@ -30,7 +30,11 @@ class _ConnectWithPhoneState extends State<ConnectWithPhone> {
               SizedBox(height: height * 0.025),
 
               /// Return Back Arrow
-              const CustomBackButton(),
+              CustomBackButton(
+                onPress: () {
+                  Navigator.pop(context);
+                },
+              ),
               SizedBox(height: height * 0.04),
 
               /// Enter details text
@@ -38,7 +42,7 @@ class _ConnectWithPhoneState extends State<ConnectWithPhone> {
                 padding: EdgeInsets.only(left: 16.0),
                 child: Text(
                   'Enter your\nDetails',
-                  style: TextStyle(fontSize: 46.0, fontWeight: FontWeight.w800),
+                  style: kEnterYourDetailsTextStyle,
                 ),
               ),
               SizedBox(height: height * 0.075),
@@ -83,7 +87,7 @@ class _ConnectWithPhoneState extends State<ConnectWithPhone> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(24.0, 8.0, 24.0, 0),
                 child: IntlPhoneField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     border: InputBorder.none,
                     hintText: 'Phone Number',
                     hintStyle: TextStyle(color: kHintTextColor),

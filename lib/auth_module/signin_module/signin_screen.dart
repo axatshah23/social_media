@@ -62,12 +62,7 @@ class _SignInState extends State<SignIn> {
                   },
                   child: const Text(
                     'Don\'t have an account? Sign Up',
-                    style: TextStyle(
-                      decoration: TextDecoration.underline,
-                      color: kPrimaryThemeColor,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16.0,
-                    ),
+                    style: kDontHaveAccountTextStyle,
                   ),
                 ),
               ],

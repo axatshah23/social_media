@@ -69,9 +69,10 @@ class _AccountAddedDialogState extends State<AccountAddedDialog> {
                   child: Text(
                     'Continue',
                     style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w800,
-                        fontSize: 18.0),
+                      color: Colors.white,
+                      fontWeight: FontWeight.w800,
+                      fontSize: 18.0,
+                    ),
                   ),
                 ),
               ),

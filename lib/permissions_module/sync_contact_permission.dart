@@ -44,7 +44,7 @@ class _AskSyncContactPermissionState extends State<AskSyncContactPermission> {
             /// Heading
             const Text(
               'Sync Contacts',
-              style: TextStyle(fontSize: 32.0, fontWeight: FontWeight.w700),
+              style: kPermissionModuleHeadingTextStyle,
               softWrap: true,
               textAlign: TextAlign.center,
             ),
@@ -73,10 +73,7 @@ class _AskSyncContactPermissionState extends State<AskSyncContactPermission> {
                   children: [
                     const Text(
                       'Sync Contacts',
-                      style: TextStyle(
-                        fontSize: 19.0,
-                        fontWeight: FontWeight.w500,
-                      ),
+                      style: kPermissionToggleTextStyle,
                     ),
                     FlutterSwitch(
                       value: onToggle,

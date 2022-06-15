@@ -1,11 +1,13 @@
+// Static bar need to change this
+
 import 'package:flutter/material.dart';
+import 'package:social/constants.dart';
 
 class CustomSearchBar extends StatelessWidget {
   const CustomSearchBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: width * 0.05),
@@ -15,7 +17,9 @@ class CustomSearchBar extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(12.0),
-          border: Border.all(color: Color(0xFFACB1C0)),
+          border: Border.all(
+            color: kSearchBarBorderColor,
+          ),
         ),
         child: Padding(
           padding: const EdgeInsets.only(left: 12.0),

@@ -46,7 +46,7 @@ class _AskNotificationsPermissionState
             /// Heading
             const Text(
               'Turn on Notifications',
-              style: TextStyle(fontSize: 32.0, fontWeight: FontWeight.w700),
+              style: kPermissionModuleHeadingTextStyle,
               softWrap: true,
               textAlign: TextAlign.center,
             ),
@@ -75,10 +75,7 @@ class _AskNotificationsPermissionState
                   children: [
                     const Text(
                       'Turn on notifications',
-                      style: TextStyle(
-                        fontSize: 19.0,
-                        fontWeight: FontWeight.w500,
-                      ),
+                      style: kPermissionToggleTextStyle,
                     ),
                     FlutterSwitch(
                       value: onToggle,

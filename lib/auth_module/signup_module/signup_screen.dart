@@ -66,10 +66,7 @@ class _SignUpState extends State<SignUp> {
                 /// Greeting Text
                 const Text(
                   'Share your greatest moments',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: kGreetingTextStyle,
                   textScaleFactor: 2.5,
                   textAlign: TextAlign.center,
                 ),
@@ -82,6 +79,7 @@ class _SignUpState extends State<SignUp> {
                   icon: Icons.facebook,
                   label: 'Connect with Facebook',
                   backgroundColor: Colors.blueAccent,
+                  iconColor: Colors.white,
                   onPress: () {
                     //TODO: Add Connect with Facebook Functionality
                   },
@@ -92,6 +90,7 @@ class _SignUpState extends State<SignUp> {
                   icon: Icons.phone,
                   label: 'Connect with Phone',
                   backgroundColor: kPrimaryThemeColor,
+                  iconColor: Colors.white,
                   onPress: () {
                     Navigator.pushNamed(context, '/connectWithPhone');
                   },
@@ -105,12 +104,7 @@ class _SignUpState extends State<SignUp> {
                   },
                   child: const Text(
                     'Already have an account? Sign In',
-                    style: TextStyle(
-                      decoration: TextDecoration.underline,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16.0,
-                    ),
+                    style: kAlreadyHaveAccountTextStyle,
                   ),
                 ),
               ],

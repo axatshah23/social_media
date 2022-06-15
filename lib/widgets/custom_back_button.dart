@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CustomBackButton extends StatefulWidget {
-  const CustomBackButton({Key? key}) : super(key: key);
+  const CustomBackButton({Key? key, required this.onPress}) : super(key: key);
+  final Function()? onPress;
 
   @override
   State<CustomBackButton> createState() => _CustomBackButtonState();
@@ -13,13 +14,11 @@ class _CustomBackButtonState extends State<CustomBackButton> {
     return Padding(
       padding: const EdgeInsets.all(6.0),
       child: GestureDetector(
-        onTap: () {
-          Navigator.pop(context);
-        },
+        onTap: widget.onPress,
         child: const Icon(
           Icons.chevron_left,
           color: Colors.black,
-          size: 40.0,
+          size: 36.0,
         ),
       ),
     );

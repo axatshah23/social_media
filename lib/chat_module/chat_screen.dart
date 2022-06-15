@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:social/chat_module/components/appbar_action_button.dart';
 import 'package:social/chat_module/components/chat_bar.dart';
 import 'package:social/chat_module/components/online_tab.dart';
 import 'package:social/constants.dart';
+import 'package:social/widgets/custom_back_button.dart';
 
 import '../lists.dart';
 
@@ -19,25 +21,29 @@ class _ChatScreenState extends State<ChatScreen> {
     return Scaffold(
       backgroundColor: kSecondaryScaffoldBackgroundGrey,
       appBar: AppBar(
-        backgroundColor: kSecondaryScaffoldBackgroundGrey,
+        backgroundColor: kSecondaryAppBarBackgroundGrey,
         centerTitle: true,
+
+        /// Back button
+        leading: CustomBackButton(
+          onPress: () {
+            Navigator.popAndPushNamed(context, '/home');
+          },
+        ),
+
+        /// Title
         title: const Text(
           'Messages',
           style: kAppBarTitleTextStyle,
         ),
+
+        /// Add new chat
         actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 16.0),
-            child: GestureDetector(
-              onTap: () {
-                // TODO: Add start new conversation event
-              },
-              child: const Icon(
-                FontAwesomeIcons.userPlus,
-                color: Colors.black,
-                size: 20.0,
-              ),
-            ),
+          AppBarActionButton(
+            icon: FontAwesomeIcons.userPlus,
+            onPress: () {
+              // TODO: Add new chat option
+            },
           )
         ],
       ),
@@ -50,7 +56,7 @@ class _ChatScreenState extends State<ChatScreen> {
               padding: const EdgeInsets.fromLTRB(16.0, 16.0, 0.0, 16.0),
               color: Colors.white,
               width: double.infinity,
-              height: 170.0,
+              height: 175.0,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,8 +64,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   /// Title
                   const Text(
                     'ONLINE USERS',
-                    style:
-                        TextStyle(fontWeight: FontWeight.w900, fontSize: 18.0),
+                    style: kOnlineUserHeadingTextStyle,
                   ),
                   const SizedBox(height: 20.0),
 

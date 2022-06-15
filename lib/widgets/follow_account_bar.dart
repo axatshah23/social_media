@@ -51,16 +51,12 @@ class _FollowAccountBarState extends State<FollowAccountBar> {
                   children: [
                     Text(
                       widget.mainText,
-                      style: const TextStyle(
-                        fontSize: 17.0,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: kFollowBarNameTextStyle,
                     ),
                     SizedBox(height: 2.5),
                     Text(
                       widget.subText,
-                      style:
-                          const TextStyle(color: kSubTextColor, fontSize: 15.0),
+                      style: kFollowBarSubTextStyle,
                     )
                   ],
                 ),

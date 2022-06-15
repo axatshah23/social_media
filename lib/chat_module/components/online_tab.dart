@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
+import '../chat_room_screen.dart';
 
 class OnlineTab extends StatefulWidget {
   const OnlineTab({Key? key, required this.name, required this.imageURL})
@@ -17,7 +18,12 @@ class _OnlineTabState extends State<OnlineTab> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // TODO: Redirect to the account for chat
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ChatRoomScreen(title: widget.name),
+          ),
+        );
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -58,12 +64,16 @@ class _OnlineTabState extends State<OnlineTab> {
 
             /// Name Text
             const SizedBox(height: 8.0),
-            Text(
-              widget.name,
-              style: const TextStyle(
-                  color: Colors.black,
-                  fontSize: 13.0,
-                  fontWeight: FontWeight.w600),
+            SizedBox(
+              height: 20.0,
+              width: 80.0,
+              child: Text(
+                widget.name,
+                maxLines: 1,
+                overflow: TextOverflow.fade,
+                textAlign: TextAlign.center,
+                style: kOnlineUserTextStyle,
+              ),
             )
           ],
         ),

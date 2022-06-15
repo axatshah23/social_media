@@ -7,11 +7,13 @@ class SocialSignUpButtons extends StatefulWidget {
       required this.icon,
       required this.label,
       required this.backgroundColor,
-      required this.onPress})
+      required this.onPress,
+      required this.iconColor})
       : super(key: key);
   final IconData icon;
   final String label;
   final Color backgroundColor;
+  final Color iconColor;
   final Function()? onPress;
 
   @override
@@ -39,7 +41,7 @@ class _SocialSignUpButtonsState extends State<SocialSignUpButtons> {
               children: [
                 Icon(
                   widget.icon,
-                  color: Colors.white,
+                  color: widget.iconColor,
                   size: 30.0,
                 ),
                 const SizedBox(width: 30.0),
@@ -47,7 +49,7 @@ class _SocialSignUpButtonsState extends State<SocialSignUpButtons> {
                   child: Text(
                     widget.label,
                     overflow: TextOverflow.ellipsis,
-                    style: kSocialSignUpButtonsLabelStyle,
+                    style: kSocialButtonsLabelStyle,
                     softWrap: false,
                   ),
                 ),

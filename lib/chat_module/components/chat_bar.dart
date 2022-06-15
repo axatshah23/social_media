@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:social/chat_module/chat_room_screen.dart';
 
 import '../../constants.dart';
 
@@ -32,7 +33,12 @@ class _ChatBarState extends State<ChatBar> {
     double width = MediaQuery.of(context).size.width;
     return GestureDetector(
       onTap: () {
-        //TODO: Take to the specific chat
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ChatRoomScreen(title: widget.name),
+          ),
+        );
       },
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
@@ -61,7 +67,7 @@ class _ChatBarState extends State<ChatBar> {
                       CircleAvatar(
                         radius: 35.0,
                         backgroundImage: NetworkImage(widget.imageURL),
-                        backgroundColor: kSecondaryScaffoldBackgroundGrey,
+                        backgroundColor: kSubTextColor,
                       ),
 
                       /// New messages dot
@@ -98,8 +104,7 @@ class _ChatBarState extends State<ChatBar> {
                   children: [
                     Text(
                       widget.name,
-                      style: const TextStyle(
-                          fontSize: 20.0, fontWeight: FontWeight.bold),
+                      style: kChatBarNameTextStyle,
                     ),
                     const SizedBox(height: 6.0),
                     SizedBox(
@@ -108,8 +113,7 @@ class _ChatBarState extends State<ChatBar> {
                         widget.lastMessage,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(
-                            color: kSubTextColor, fontSize: 14.0),
+                        style: kLastMessageDisplayTextStyle,
                       ),
                     ),
                   ],

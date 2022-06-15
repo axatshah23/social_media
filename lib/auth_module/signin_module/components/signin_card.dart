@@ -19,7 +19,7 @@ class _SignInCardState extends State<SignInCard> {
       width: width * 0.9,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20.0),
-        color: Colors.white,
+        color: kSigninCardBackgroundColor,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -30,10 +30,7 @@ class _SignInCardState extends State<SignInCard> {
           /// Welcome back heading
           const Text(
             'Welcome Back',
-            style: TextStyle(
-              fontSize: 36.0,
-              fontWeight: FontWeight.bold,
-            ),
+            style: kWelcomeBackHeadingTextStyle,
           ),
 
           /// Login to your account heading
@@ -41,7 +38,7 @@ class _SignInCardState extends State<SignInCard> {
             padding: EdgeInsets.only(top: 12.0),
             child: Text(
               'Login to your account',
-              style: TextStyle(color: kHintTextColor, fontSize: 17.0),
+              style: kLoginToYourAccountHeadingTextStyle,
             ),
           ),
           SizedBox(height: height * 0.05),
