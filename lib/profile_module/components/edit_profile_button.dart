@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:social/profile_module/edit_profile_screen.dart';
 
 import '../../constants.dart';
 
@@ -14,7 +15,8 @@ class _EditProfileButtonState extends State<EditProfileButton> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // TODO: Redirect to edit profile screen
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const EditProfileScreen()));
       },
       child: Container(
         padding: const EdgeInsets.all(4.0),

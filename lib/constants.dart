@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 /// Theme Colors
 const kPrimaryThemeColor = Color(0xFFFF2D55);
-const kSecondaryScaffoldBackgroundGrey = Color(0xFFF1F2F6);
-const kSecondaryAppBarBackgroundGrey = Color(0xFFF1F2F6);
+const kSecondaryScaffoldBackgroundGrey = Color(0xFFF7F8FA);
+const kSecondaryAppBarBackgroundGrey = Color(0xFFF7F8FA);
 const kSubTextColor = Color(0xFFBDBDBD);
 const kActiveDotColor = Color(0xFF7ED321);
 // End of Theme Colors
@@ -93,6 +93,20 @@ const kFindFriendsTitleTextStyle = TextStyle(
 // End of Home Module
 
 /// Notification Module
+const kTabBarUnselectedTabColor = Color(0xFFF1F2F6);
+const kTabBarSelectedTabColor = Colors.white;
+const kSelectedTabTextColor = Colors.black;
+const kUnselectedTabTextColor = Color(0xFFACB1C0);
+const kTabBarLabelTextStyle =
+    TextStyle(fontWeight: FontWeight.w400, fontSize: 15.0);
+const kNotificationNameTextStyle = TextStyle(
+  fontSize: 15.0,
+  fontWeight: FontWeight.bold,
+);
+const kNotificationFollowUpTextStyle = TextStyle(
+  fontWeight: FontWeight.w500,
+  fontSize: 15.0,
+);
 // End of Notification Module
 
 /// Permission Module
@@ -133,6 +147,15 @@ const List<BoxShadow> kShortcutCardBoxShadow = [
 ];
 const kShortcutBottomButtonTextStyle = TextStyle(
   fontSize: 18.0,
+);
+
+const kEditHintTextStyle = TextStyle(
+  fontSize: 15.0,
+  color: kSubTextColor,
+);
+const kEditFieldTextStyle = TextStyle(
+  fontSize: 18.0,
+  fontWeight: FontWeight.w600,
 );
 // End of Profile Module
 

@@ -141,3 +141,39 @@ List<Color?> shortcutColors = [
   const Color(0xFFff9100),
   Colors.indigoAccent,
 ];
+
+List<String> followUpText = [
+  'started following you',
+  'accepted your request',
+  'started following you',
+  'accepted your request',
+  'started following you',
+  'accepted your request',
+  'started following you',
+  'accepted your request',
+  'started following you',
+  'accepted your request',
+  'started following you',
+  'accepted your request',
+  'started following you',
+  'accepted your request',
+  'started following you',
+];
+
+List<String> time = [
+  '56 seconds ago',
+  '2 minutes ago',
+  '7 minutes ago',
+  '30 minutes ago',
+  '2 hours ago',
+  '3 hours ago',
+  '5 hours ago',
+  '8 hours ago',
+  '12 hours ago',
+  '18 hours ago',
+  '1 day ago',
+  '2 days ago',
+  '5 days ago',
+  '8 days ago',
+  '1 month ago',
+];
