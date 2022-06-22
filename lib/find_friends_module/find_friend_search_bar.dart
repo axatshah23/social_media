@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:social/constants.dart';
 
-class CustomSearchBar extends StatelessWidget {
-  const CustomSearchBar({Key? key}) : super(key: key);
+class FindFriendSearchBar extends StatelessWidget {
+  const FindFriendSearchBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 
 import '../../constants.dart';
 
-class CustomNotificationTabBar {
-  PreferredSize notificationTabBar() {
+class CustomTabBar {
+  CustomTabBar(this.tabs) {
+    tabs = this.tabs;
+  }
+  List<Widget> tabs;
+
+  PreferredSize customTabBar() {
     return PreferredSize(
       preferredSize: const Size.fromHeight(55.0),
       child: Container(
@@ -23,11 +28,7 @@ class CustomNotificationTabBar {
           labelPadding: const EdgeInsets.symmetric(vertical: 6.0),
           labelStyle: kTabBarLabelTextStyle,
           unselectedLabelStyle: kTabBarLabelTextStyle,
-          tabs: const [
-            Text('Posts'),
-            Text('Photos'),
-            Text('Friends'),
-          ],
+          tabs: tabs,
         ),
       ),
     );

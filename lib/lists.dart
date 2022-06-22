@@ -177,3 +177,49 @@ List<String> time = [
   '8 days ago',
   '1 month ago',
 ];
+
+List<Widget> notificationTabs = [
+  Text('Posts'),
+  Text('Photos'),
+  Text('Friends'),
+];
+
+List<Widget> homeTabs = [
+  Text('Following'),
+  Text('Discover'),
+];
+List<String> location = [
+  'Brooklyn, NY',
+  '',
+  'Russia',
+  '',
+  '',
+  'Brooklyn, NY',
+  '',
+  'Russia',
+  '',
+  '',
+  'Brooklyn, NY',
+  '',
+  'Russia',
+  '',
+  '',
+];
+
+List<String> caption = [
+  'I can do this all day',
+  'Never missed a shot',
+  'Spy you never knew',
+  'I am IronMan',
+  'Hulk Smash',
+  'God of thunder',
+  'My spider sense is tingling',
+  'Can you see me?',
+  'Higher. Further. Faster.',
+  'I am the scarlet witch',
+  'My fingers can never heal',
+  'Who\'s Bucky?',
+  'Boom! you looking for this.',
+  'Steven was that you?',
+  'I\'m Daredevil. Not even God can stop that now.'
+];

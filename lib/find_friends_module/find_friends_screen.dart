@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:social/constants.dart';
-import 'package:social/find_friends_module/search_bar.dart';
+import 'package:social/find_friends_module/find_friend_search_bar.dart';
 import 'package:social/widgets/follow_account_bar.dart';
 
 import '../lists.dart';
@@ -64,7 +64,7 @@ class _FindFriendsScreenState extends State<FindFriendsScreen> {
           SizedBox(height: height * 0.02),
 
           /// Search Bar
-          const CustomSearchBar(),
+          const FindFriendSearchBar(),
           SizedBox(height: height * 0.02),
           // TODO: Search bar functionality
 

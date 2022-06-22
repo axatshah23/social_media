@@ -90,6 +90,52 @@ const kFindFriendsTitleTextStyle = TextStyle(
 // End of Find Friends Module
 
 /// Home Module
+const kHomeSearchBarBackground = Color(0xFFF1F2F6);
+const kHomeSearchBarTextIconColor = Color(0xFFACB1C0);
+const kCreateButtonGradient = [
+  Color(0xFFFF906A),
+  kPrimaryThemeColor,
+];
+const kHomeSearchBarTextStyle = TextStyle(
+  color: kHomeSearchBarTextIconColor,
+  fontSize: 20.0,
+  fontWeight: FontWeight.w500,
+);
+const kUserStoryTextStyle = TextStyle(
+  color: Colors.black,
+  fontSize: 11.0,
+  fontWeight: FontWeight.w600,
+);
+const List<BoxShadow> kPostElevation = [
+  BoxShadow(
+    color: Color(0x24000000),
+    offset: Offset(
+      2.0,
+      2.0,
+    ),
+    blurRadius: 8.0,
+    spreadRadius: 2.0,
+  ),
+];
+const kPostTitleTextStyle = TextStyle(
+  fontWeight: FontWeight.w700,
+  fontSize: 18.0,
+);
+const kCommentTitleTextStyle = TextStyle(
+  fontWeight: FontWeight.w700,
+  fontSize: 16.0,
+);
+const kPostLocationTextStyle = TextStyle(
+  fontWeight: FontWeight.w500,
+  fontSize: 15.0,
+  color: kSubTextColor,
+);
+const kCommentLocationTextStyle = TextStyle(
+  fontWeight: FontWeight.w500,
+  fontSize: 13.0,
+  color: kSubTextColor,
+);
+const kPostCaptionTextStyle = TextStyle(fontSize: 16.0);
 // End of Home Module
 
 /// Notification Module

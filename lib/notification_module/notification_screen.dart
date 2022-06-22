@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:social/constants.dart';
-import 'package:social/notification_module/components/custom_notification_tabbar.dart';
+import 'package:social/lists.dart';
+import 'package:social/notification_module/components/custom_tab_bar.dart';
 import 'package:social/notification_module/notification_friends_screen.dart';
 import 'package:social/notification_module/notification_photos_screen.dart';
 
@@ -38,7 +39,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
           ),
 
           /// TabBar
-          bottom: CustomNotificationTabBar().notificationTabBar(),
+          bottom: CustomTabBar(notificationTabs).customTabBar(),
         ),
 
         /// TabBarView for different types of notifications
