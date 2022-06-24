@@ -117,6 +117,11 @@ const List<BoxShadow> kPostElevation = [
     spreadRadius: 2.0,
   ),
 ];
+BoxDecoration kPostContainerDecoration = BoxDecoration(
+  borderRadius: BorderRadius.circular(12.0),
+  boxShadow: kPostElevation,
+  color: Colors.white,
+);
 const kPostTitleTextStyle = TextStyle(
   fontWeight: FontWeight.w700,
   fontSize: 18.0,
@@ -136,6 +141,7 @@ const kCommentLocationTextStyle = TextStyle(
   color: kSubTextColor,
 );
 const kPostCaptionTextStyle = TextStyle(fontSize: 16.0);
+const kContentNumberIndicatorColor = Color(0x55000000);
 // End of Home Module
 
 /// Notification Module
