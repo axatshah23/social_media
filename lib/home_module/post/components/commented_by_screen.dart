@@ -52,9 +52,9 @@ class _CommentedByScreenState extends State<CommentedByScreen> {
 
             /// Comments
             Container(
-              margin: EdgeInsets.all(8.0),
-              padding: EdgeInsets.all(8.0),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
+              decoration: const BoxDecoration(
                 color: Colors.transparent,
                 border: Border(
                   bottom: BorderSide(
@@ -90,7 +90,7 @@ class _CommentedByScreenState extends State<CommentedByScreen> {
                               /// Name
                               SizedBox(
                                 width: width * 0.6,
-                                child: Text(
+                                child: const Text(
                                   'Steve Rogers',
                                   overflow: TextOverflow.ellipsis,
                                   maxLines: 1,
@@ -101,7 +101,7 @@ class _CommentedByScreenState extends State<CommentedByScreen> {
                               /// Location(Optional) and time
                               SizedBox(
                                 width: width * 0.6,
-                                child: Text(
+                                child: const Text(
                                   '2 hours ago',
                                   overflow: TextOverflow.ellipsis,
                                   maxLines: 2,
@@ -125,17 +125,17 @@ class _CommentedByScreenState extends State<CommentedByScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 12.0),
+                  const SizedBox(height: 12.0),
 
                   /// Comment content
                   Text(
                     lastMessage[14],
-                    style: TextStyle(fontSize: 16.0),
+                    style: const TextStyle(fontSize: 16.0),
                   ),
-                  SizedBox(height: 12.0),
+                  const SizedBox(height: 12.0),
 
                   /// Reply Button
-                  Text(
+                  const Text(
                     'Reply',
                     style: TextStyle(fontSize: 15.0, color: kSubTextColor),
                   ),
@@ -143,9 +143,9 @@ class _CommentedByScreenState extends State<CommentedByScreen> {
               ),
             ),
             Container(
-              margin: EdgeInsets.all(8.0),
-              padding: EdgeInsets.all(8.0),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
+              decoration: const BoxDecoration(
                 color: Colors.transparent,
                 border: Border(
                   bottom: BorderSide(
@@ -181,7 +181,7 @@ class _CommentedByScreenState extends State<CommentedByScreen> {
                               /// Name
                               SizedBox(
                                 width: width * 0.6,
-                                child: Text(
+                                child: const Text(
                                   'Steve Rogers',
                                   overflow: TextOverflow.ellipsis,
                                   maxLines: 1,
@@ -192,7 +192,7 @@ class _CommentedByScreenState extends State<CommentedByScreen> {
                               /// Location(Optional) and time
                               SizedBox(
                                 width: width * 0.6,
-                                child: Text(
+                                child: const Text(
                                   '2 hours ago',
                                   overflow: TextOverflow.ellipsis,
                                   maxLines: 2,
@@ -216,17 +216,17 @@ class _CommentedByScreenState extends State<CommentedByScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 12.0),
+                  const SizedBox(height: 12.0),
 
                   /// Comment content
                   Text(
                     lastMessage[14],
-                    style: TextStyle(fontSize: 16.0),
+                    style: const TextStyle(fontSize: 16.0),
                   ),
-                  SizedBox(height: 12.0),
+                  const SizedBox(height: 12.0),
 
                   /// Reply Button
-                  Text(
+                  const Text(
                     'Reply',
                     style: TextStyle(fontSize: 15.0, color: kSubTextColor),
                   ),
@@ -234,9 +234,9 @@ class _CommentedByScreenState extends State<CommentedByScreen> {
               ),
             ),
             Container(
-              margin: EdgeInsets.all(8.0),
-              padding: EdgeInsets.all(8.0),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
+              decoration: const BoxDecoration(
                 color: Colors.transparent,
                 border: Border(
                   bottom: BorderSide(
@@ -272,7 +272,7 @@ class _CommentedByScreenState extends State<CommentedByScreen> {
                               /// Name
                               SizedBox(
                                 width: width * 0.6,
-                                child: Text(
+                                child: const Text(
                                   'Steve Rogers',
                                   overflow: TextOverflow.ellipsis,
                                   maxLines: 1,
@@ -283,7 +283,7 @@ class _CommentedByScreenState extends State<CommentedByScreen> {
                               /// Location(Optional) and time
                               SizedBox(
                                 width: width * 0.6,
-                                child: Text(
+                                child: const Text(
                                   '2 hours ago',
                                   overflow: TextOverflow.ellipsis,
                                   maxLines: 2,
@@ -307,17 +307,17 @@ class _CommentedByScreenState extends State<CommentedByScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 12.0),
+                  const SizedBox(height: 12.0),
 
                   /// Comment content
                   Text(
                     lastMessage[14],
-                    style: TextStyle(fontSize: 16.0),
+                    style: const TextStyle(fontSize: 16.0),
                   ),
-                  SizedBox(height: 12.0),
+                  const SizedBox(height: 12.0),
 
                   /// Reply Button
-                  Text(
+                  const Text(
                     'Reply',
                     style: TextStyle(fontSize: 15.0, color: kSubTextColor),
                   ),

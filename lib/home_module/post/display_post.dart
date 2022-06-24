@@ -6,9 +6,10 @@ import '../../constants.dart';
 import '../../lists.dart';
 import 'components/commented_by_screen.dart';
 import 'components/heart_animation.dart';
-import 'components/liked_by_avatar_circles.dart';
 import 'components/liked_by_screen.dart';
 import 'components/top_info_bar.dart';
+import 'components/viewed_by_avatar_circles.dart';
+import 'components/viewed_by_screen.dart';
 
 class DisplayPost extends StatefulWidget {
   DisplayPost({
@@ -53,33 +54,33 @@ class _DisplayPostState extends State<DisplayPost> {
   /// Get aspect ratio
   void getAspectRatio() {
     /// When you share a photo that has a width between 320 and 1080 pixels, we keep that photo at its original resolution as long as the photo's aspect ratio is between 1.91:1 and 4:5 (a height between 566 and 1350 pixels with a width of 1080 pixels). If the aspect ratio of your photo isn't supported, it will be cropped to fit a supported ratio. If you share a photo at a lower resolution, we enlarge it to a width of 320 pixels. If you share a photo at a higher resolution, we size it down to a width of 1080 pixels.
-    Image image;
+    Image content;
     if (widget.hasMultipleContent) {
-      image = Image.network(widget.multipleContent![0]);
+      content = Image.network(widget.multipleContent![0]);
     } else {
-      image = Image.network(widget.singleContent!);
+      content = Image.network(widget.singleContent!);
     }
-    image.image.resolve(const ImageConfiguration()).addListener(
+    content.image.resolve(const ImageConfiguration()).addListener(
       ImageStreamListener(
         (ImageInfo image, bool synchronousCall) {
           var myImage = image.image;
-          double imageWidth = myImage.width.toDouble();
-          double imageHeight = myImage.height.toDouble();
+          double contentWidth = myImage.width.toDouble();
+          double contentHeight = myImage.height.toDouble();
 
           /// Calculate aspect ratio
           setState(() {
-            aspectRatio = imageWidth / imageHeight;
+            aspectRatio = contentWidth / contentHeight;
           });
 
           /// Check that it fits constraints i.e. is between 1.91:1 and 4:5 if not make necessary changes
           if (aspectRatio < (4 / 5) || aspectRatio > (1.91 / 1)) {
             /// Decrease or increase image width according to need
-            if (imageWidth < 320) {
-              imageWidth = 320;
-              aspectRatio = imageWidth / imageHeight;
-            } else if (imageWidth > 1080) {
-              imageWidth = 1080;
-              aspectRatio = imageWidth / imageHeight;
+            if (contentWidth < 320) {
+              contentWidth = 320;
+              aspectRatio = contentWidth / contentHeight;
+            } else if (contentWidth > 1080) {
+              contentWidth = 1080;
+              aspectRatio = contentWidth / contentHeight;
             }
           }
         },
@@ -320,13 +321,13 @@ class _DisplayPostState extends State<DisplayPost> {
                     ),
 
                     /// Three overlapping circles (Liked by circles)
-                    // TODO: Make a way to display three random profile pictures of people who have liked image
+                    // TODO: Make a way to display three random profile pictures of people who have viewed image
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => LikedByScreen(
+                            builder: (context) => ViewedByScreen(
                               likes: widget.likeCounter,
                             ),
                           ),
@@ -336,7 +337,7 @@ class _DisplayPostState extends State<DisplayPost> {
                         height: 30.0,
                         width: 65.0,
                         color: Colors.transparent,
-                        child: LikedByAvatarCircles(
+                        child: ViewedByAvatarCircles(
                           topImage: imageAddress[6],
                           centerImage: imageAddress[5],
                           bottomImage: imageAddress[9],

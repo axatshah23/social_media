@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LikedByAvatarCircles extends StatefulWidget {
-  const LikedByAvatarCircles(
+class ViewedByAvatarCircles extends StatefulWidget {
+  const ViewedByAvatarCircles(
       {Key? key,
       required this.topImage,
       required this.centerImage,
@@ -12,10 +12,10 @@ class LikedByAvatarCircles extends StatefulWidget {
   final String bottomImage;
 
   @override
-  State<LikedByAvatarCircles> createState() => _LikedByAvatarCirclesState();
+  State<ViewedByAvatarCircles> createState() => _ViewedByAvatarCirclesState();
 }
 
-class _LikedByAvatarCirclesState extends State<LikedByAvatarCircles> {
+class _ViewedByAvatarCirclesState extends State<ViewedByAvatarCircles> {
   @override
   Widget build(BuildContext context) {
     return Stack(
