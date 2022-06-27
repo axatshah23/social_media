@@ -4,16 +4,18 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../../../constants.dart';
 
 class TopInfoBar extends StatefulWidget {
-  const TopInfoBar(
-      {Key? key,
-      required this.profilePicture,
-      required this.name,
-      required this.location,
-      required this.time})
-      : super(key: key);
+  TopInfoBar({
+    Key? key,
+    required this.profilePicture,
+    required this.name,
+    required this.isLocationShared,
+    this.location,
+    required this.time,
+  }) : super(key: key);
   final String profilePicture;
   final String name;
-  final String location;
+  final bool isLocationShared;
+  String? location;
   final String time;
 
   @override
@@ -24,10 +26,10 @@ class _TopInfoBarState extends State<TopInfoBar> {
   // TODO: Have actual info here
   String subText() {
     String sub = '';
-    if (widget.location.isEmpty) {
-      sub = widget.time;
-    } else {
+    if (widget.isLocationShared) {
       sub = '${widget.location} · ${widget.time}';
+    } else {
+      sub = widget.time;
     }
     return sub;
   }
