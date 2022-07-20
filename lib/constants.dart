@@ -141,7 +141,8 @@ const kCommentLocationTextStyle = TextStyle(
   color: kSubTextColor,
 );
 const kPostCaptionTextStyle = TextStyle(fontSize: 16.0);
-const kContentNumberIndicatorColor = Color(0x55000000);
+const kLightBlackBackground = Color(0x55000000);
+double commonVolume = 1.0;
 // End of Home Module
 
 /// Notification Module
@@ -236,6 +237,19 @@ const kNavBarSelectedItemColor = kPrimaryThemeColor;
 const kNavBarUnselectedItemColor = Color(0xFFACB1C0);
 const double kNavBarFontSize = 13;
 // End of Navigation Bar
+
+/// Dating Module
+const kDatingCardNameTextStyle = TextStyle(
+  color: Colors.white,
+  fontSize: 18.0,
+  fontWeight: FontWeight.bold,
+);
+const kDatingDetailTextStyle = TextStyle(
+  color: Colors.white,
+  fontSize: 22.0,
+  fontWeight: FontWeight.bold,
+);
+// End of Dating Module
 
 /// Others
 const kAppBarTitleTextStyle = TextStyle(

@@ -1,18 +1,26 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:social/constants.dart';
+import 'package:social/home_module/post/components/video_player.dart';
 import 'package:social/lists.dart';
 import 'package:social/widgets/custom_back_button.dart';
 
 class CommentedByScreen extends StatefulWidget {
-  const CommentedByScreen({
+  CommentedByScreen({
     Key? key,
+    required this.currentIndex,
     required this.comments,
-    required this.image,
     required this.aspectRatio,
+    required this.numberOfContent,
+    required this.isImage,
+    required this.content,
   }) : super(key: key);
+  int currentIndex;
   final int comments;
-  final String image;
+  final int numberOfContent;
+  final List<bool> isImage;
+  final List<String> content;
   final double aspectRatio;
 
   @override
@@ -42,12 +50,68 @@ class _CommentedByScreenState extends State<CommentedByScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             /// content itself
-            AspectRatio(
-              aspectRatio: widget.aspectRatio,
-              child: Image(
-                image: NetworkImage(widget.image),
-                fit: BoxFit.cover,
+            CarouselSlider(
+              options: CarouselOptions(
+                aspectRatio: widget.aspectRatio,
+                viewportFraction: 1.0,
+                enableInfiniteScroll: false,
+                onPageChanged: (index, reason) {
+                  setState(
+                    () {
+                      widget.currentIndex = index;
+                    },
+                  );
+                },
               ),
+              items: widget.content
+                  .map(
+                    (item) => Stack(
+                      alignment: AlignmentDirectional.topEnd,
+                      children: [
+                        /// Stack containing content and like animation
+                        Stack(
+                          alignment: AlignmentDirectional.center,
+                          children: [
+                            /// Content
+                            Container(
+                              child: widget.isImage[widget.currentIndex]
+                                  ? AspectRatio(
+                                      aspectRatio: widget.aspectRatio,
+                                      child: Image(
+                                        image: NetworkImage(item),
+                                        fit: BoxFit.cover,
+                                      ),
+                                    )
+                                  : Center(
+                                      child: CustomVideoPlayer(url: item),
+                                    ),
+                            ),
+                          ],
+                        ),
+
+                        /// content number indicator
+                        Visibility(
+                          visible: widget.numberOfContent > 1,
+                          child: Container(
+                            margin: const EdgeInsets.all(8.0),
+                            height: 25.0,
+                            width: 50.0,
+                            decoration: BoxDecoration(
+                              color: kLightBlackBackground,
+                              borderRadius: BorderRadius.circular(12.0),
+                            ),
+                            child: Center(
+                              child: Text(
+                                '${(widget.currentIndex + 1).toString()}/${widget.numberOfContent}',
+                                style: const TextStyle(color: Colors.white),
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                  .toList(),
             ),
 
             /// Comments

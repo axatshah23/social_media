@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:social/constants.dart';
+import 'package:social/dating_module/dating_navbar.dart';
 
 class ShortcutCard extends StatefulWidget {
   const ShortcutCard(
@@ -18,7 +19,11 @@ class _ShortcutCardState extends State<ShortcutCard> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // TODO: Add onTap event action
+        switch (widget.label) {
+          case 'Dating':
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const DatingNavBar()));
+        }
       },
       child: Container(
         margin: const EdgeInsets.all(8.0),
