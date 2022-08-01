@@ -241,13 +241,27 @@ const double kNavBarFontSize = 13;
 /// Dating Module
 const kDatingCardNameTextStyle = TextStyle(
   color: Colors.white,
+  fontSize: 22.0,
+  fontWeight: FontWeight.bold,
+);
+const kDatingProfessionTextStyle = TextStyle(
+  color: Colors.white,
+  fontSize: 17.0,
+  fontWeight: FontWeight.w500,
+);
+const kDatingDetailTitleTextStyle = TextStyle(
   fontSize: 18.0,
   fontWeight: FontWeight.bold,
 );
-const kDatingDetailTextStyle = TextStyle(
-  color: Colors.white,
-  fontSize: 22.0,
-  fontWeight: FontWeight.bold,
+const kDatingDetailContentTextStyle = TextStyle(
+  fontWeight: FontWeight.w500,
+  color: Colors.grey,
+  fontSize: 15.0,
+);
+const kChipLabelStyle = TextStyle(
+  color: Colors.grey,
+  fontSize: 15.0,
+  fontWeight: FontWeight.w500,
 );
 // End of Dating Module
 

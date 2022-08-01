@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:social/constants.dart';
 import 'package:social/dating_module/dating_home/components/like_dislike_button.dart';
 import 'package:social/lists.dart';
 import 'package:swipable_stack/swipable_stack.dart';
@@ -38,7 +39,8 @@ class _DatingHomeScreenState extends State<DatingHomeScreen> {
                 // TODO: Save the swipe-direction of respective person to the database.
                 print(direction);
               },
-              builder: (context, itemSwipeProperties) {
+              builder: (context, swipeProperty) {
+                /// Swipeable Card
                 return GestureDetector(
                   onTap: () {
                     // TODO: Full Screen Mode
@@ -51,23 +53,95 @@ class _DatingHomeScreenState extends State<DatingHomeScreen> {
                       ),
                     );
                   },
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20.0),
-                      image: DecorationImage(
-                        image: NetworkImage(
-                          imageAddress[itemSwipeProperties.index],
+                  child: Stack(
+                    alignment: AlignmentDirectional.bottomCenter,
+                    children: [
+                      /// Background Image Card
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20.0),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              imageAddress[swipeProperty.index],
+                            ),
+                            fit: BoxFit.cover,
+                          ),
                         ),
-                        fit: BoxFit.cover,
                       ),
-                    ),
+
+                      /// Name and Other info
+                      Container(
+                        height: 100.0,
+                        width: double.infinity,
+                        padding: EdgeInsets.all(16.0),
+                        decoration: const BoxDecoration(
+                          color: Colors.black38,
+                          borderRadius: BorderRadius.only(
+                            bottomRight: Radius.circular(20.0),
+                            bottomLeft: Radius.circular(20.0),
+                          ),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            /// Name and Age
+                            Row(
+                              children: [
+                                /// Name
+                                Text(
+                                  name[swipeProperty.index],
+                                  style: kDatingCardNameTextStyle,
+                                ),
+
+                                /// Age
+                                const Text(
+                                  ', 24',
+                                  style: kDatingCardNameTextStyle,
+                                )
+                              ],
+                            ),
+                            SizedBox(height: 6.0),
+
+                            /// Profession and social media icons
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                /// Profession
+                                const Text(
+                                  'Avenger',
+                                  style: kDatingProfessionTextStyle,
+                                ),
+
+                                /// Social Media Icons
+                                Row(
+                                  children: const [
+                                    Icon(
+                                      Icons.facebook_outlined,
+                                      color: Colors.white,
+                                    ),
+                                    SizedBox(width: 6.0),
+                                    Icon(
+                                      Icons.snapchat_outlined,
+                                      color: Colors.white,
+                                    )
+                                  ],
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      )
+                    ],
                   ),
                 );
               },
             ),
           ),
+
+          /// Like, Dislike and message Buttons
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               /// Dislike Button
               LikeDislikeButton(
@@ -75,6 +149,54 @@ class _DatingHomeScreenState extends State<DatingHomeScreen> {
                 controller: controller,
                 color: Colors.red,
                 icon: FontAwesomeIcons.xmark,
+              ),
+
+              /// Message Button
+              Stack(
+                children: [
+                  /// Button
+                  GestureDetector(
+                    onTap: () {
+                      // TODO: Redirect to message screen
+                    },
+                    child: const CircleAvatar(
+                      radius: 30.0,
+                      backgroundColor: Colors.blueAccent,
+                      child: Center(
+                        child: Icon(
+                          Icons.messenger,
+                          color: Colors.white,
+                          size: 32.0,
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  /// Indicator
+                  // TODO: Set this visibility such that only once can  a message be sent to any person or free
+                  Visibility(
+                    visible: true,
+                    child: Positioned(
+                      bottom: 0.0,
+                      right: -0.0,
+                      child: Container(
+                        width: 21.0,
+                        height: 21.0,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.white),
+                          shape: BoxShape.circle,
+                          color: kPrimaryThemeColor,
+                        ),
+                        child: const Center(
+                          child: Text(
+                            '1',
+                            style: const TextStyle(color: Colors.white),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
 
               /// Like Button

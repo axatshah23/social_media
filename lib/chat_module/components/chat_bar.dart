@@ -86,13 +86,14 @@ class _ChatBarState extends State<ChatBar> {
                               color: kPrimaryThemeColor,
                             ),
                             child: Center(
-                                child: Text(
-                              widget.numberOfNewMessages,
-                              style: const TextStyle(color: Colors.white),
-                            )),
+                              child: Text(
+                                widget.numberOfNewMessages,
+                                style: const TextStyle(color: Colors.white),
+                              ),
+                            ),
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),

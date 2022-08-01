@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomBackButton extends StatefulWidget {
-  const CustomBackButton({Key? key, required this.onPress}) : super(key: key);
+  CustomBackButton({Key? key, required this.onPress}) : super(key: key);
   final Function()? onPress;
 
   @override
