@@ -37,11 +37,12 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData.dark(),
       theme: ThemeData(
-          textTheme: GoogleFonts.robotoTextTheme(),
-          appBarTheme: const AppBarTheme(
-            backgroundColor: Colors.white,
-            elevation: 0.0,
-          )),
+        textTheme: GoogleFonts.robotoTextTheme(),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white,
+          elevation: 0.0,
+        ),
+      ),
       home: const SignIn(),
     );
   }
